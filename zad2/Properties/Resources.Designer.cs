@@ -61,6 +61,16 @@ namespace zad2.Properties {
         }
         
         /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paddle {
+            get {
+                object obj = ResourceManager.GetObject("paddle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu .
         /// </summary>
         internal static string pilka {

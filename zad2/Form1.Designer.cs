@@ -33,6 +33,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.genbtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pad = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pad)).BeginInit();
             this.SuspendLayout();
             // 
             // startbtn
@@ -48,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.pad);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(661, 648);
@@ -67,6 +71,18 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pad
+            // 
+            this.pad.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pad.Location = new System.Drawing.Point(30, 600);
+            this.pad.Name = "pad";
+            this.pad.Size = new System.Drawing.Size(200, 30);
+            this.pad.TabIndex = 0;
+            this.pad.TabStop = false;
+            this.pad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PadMouseDown);
+            this.pad.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PadMouseMove);
+            this.pad.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PadMouseUp);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -78,6 +94,8 @@
             this.Controls.Add(this.startbtn);
             this.Name = "Form1";
             this.Text = "Zad2";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,6 +105,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button genbtn;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pad;
     }
 }
 
